@@ -1,0 +1,8 @@
+rm -rf ~/Library/Containers/com.docker.docker
+ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker
+
+
+docker build -t wester .
+docker run -it --rm --name wester -p 80:80 -p 443:443 wester
+
+docker exec -it wester bash
